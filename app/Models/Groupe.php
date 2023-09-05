@@ -24,6 +24,7 @@ class Groupe extends Model
     protected $fillable = [
         'name',
         'post_code',
-        'address'
+        'address',
+        'absence'
     ];
 }

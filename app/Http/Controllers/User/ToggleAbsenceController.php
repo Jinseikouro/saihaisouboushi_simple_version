@@ -32,19 +32,17 @@ class ToggleAbsenceController extends Controller
 
         // 同じグループに所属する他のユーザーの中に absence が 1 のユーザーがいるか調べる
         $absenceInGroup = User::where('groupe_id', $groupeId)
-        ->where('absence', 1)
-        ->exists();
+            ->where('absence', 1)
+            ->exists();
 
         // グループの absence カラムを更新
-        $groupe = Groupe::find($groupeId); // Groupe モデルに合わせて調整
-        if ($absenceInGroup)
-        {
-        $groupe->update(['absence' => 1]);
-        }
-        else
-        {
+        $groupe = Groupe::find($groupeId); // 正しい Groupe レコードを取得する
+        if ($absenceInGroup) {
+            $groupe->update(['absence' => 1]);
+        } else {
             $groupe->update(['absence' => 0]);
-        }
+    }
+
 
         return redirect()->route('toggle-absence', ['user' => $user]);
 
