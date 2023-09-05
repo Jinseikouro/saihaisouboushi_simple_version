@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\Groupe;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -25,6 +26,25 @@ class ToggleAbsenceController extends Controller
         ([
             'absence' => $user->absence ? 0 : 1,
         ]);
+
+        // 所属するグループの groupe_id を取得
+        $groupeId = $user->groupe_id;
+
+        // 同じグループに所属する他のユーザーの中に absence が 1 のユーザーがいるか調べる
+        $absenceInGroup = User::where('groupe_id', $groupeId)
+        ->where('absence', 1)
+        ->exists();
+
+        // グループの absence カラムを更新
+        $groupe = Groupe::find($groupeId); // Groupe モデルに合わせて調整
+        if ($absenceInGroup)
+        {
+        $groupe->update(['absence' => 1]);
+        }
+        else
+        {
+            $groupe->update(['absence' => 0]);
+        }
 
         return redirect()->route('toggle-absence', ['user' => $user]);
 
