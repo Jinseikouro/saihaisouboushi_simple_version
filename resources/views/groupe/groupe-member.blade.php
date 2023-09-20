@@ -1,5 +1,5 @@
 <x-app-layout>
-    <form method="POST" action="{{ route('groupe-member', ['groupes' => $groupe->id]) }}">
+    <form method="POST" action="{{ route('user.groupe-member', ['groupes' => $groupe->id]) }}">
     @csrf
 
     <x-slot name="header">

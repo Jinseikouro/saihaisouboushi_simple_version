@@ -10,6 +10,8 @@ use Symfony\Component\HttpFoundation\Response;
 
 class RedirectIfAuthenticated
 {
+    private const GUARD_USER='users';
+    private const GUARD_DRIVER='drivers';
     /**
      * Handle an incoming request.
      *
@@ -17,6 +19,11 @@ class RedirectIfAuthenticated
      */
     public function handle(Request $request, Closure $next, string ...$guards): Response
     {
+        if(Auth::guard(self::GUARD_USER)->check() && $request->routeIs('user.*')){return redirect(RouteServiceProvider::HOME);}
+        if(Auth::guard(self::GUARD_DRIVER)->check() && $request->routeIs('driver.*')){return redirect(RouteServiceProvider::DRIVER_HOME);}
+
+
+        /*
         $guards = empty($guards) ? [null] : $guards;
 
         foreach ($guards as $guard) {
@@ -24,7 +31,7 @@ class RedirectIfAuthenticated
                 return redirect(RouteServiceProvider::HOME);
             }
         }
-
+        */
         return $next($request);
     }
 }

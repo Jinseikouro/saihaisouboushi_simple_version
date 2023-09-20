@@ -1,5 +1,5 @@
 <x-guest-like-app-layout>
-    <form method="POST" action="{{ route('groupe-register') }}">
+    <form method="POST" action="{{ route('user.groupe-register') }}">
         @csrf
 
         <div style="font-family: cursiv; font-size: 30px; text-align:center">

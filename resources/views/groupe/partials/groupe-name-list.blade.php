@@ -15,7 +15,7 @@
             <tr>
                 <td class="border">{{ $groupe->id }}</td>
                 <td class="border">
-                    <a href="{{ route('groupe-member', ['groupes' => $groupe->id]) }}" class="text-blue-500 hover:underline">
+                    <a href="{{ route('user.groupe-member', ['groupes' => $groupe->id]) }}" class="text-blue-500 hover:underline">
                         <span class="text-blue-500 hover:underline">{{ $groupe->name }}</span>
                     </a>
                 </td>
