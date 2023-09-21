@@ -9,13 +9,13 @@
         </p>
     </header>
 
-    <form method="post" action="{{ route('profile.update') }}" class="mt-6 space-y-6">
+    <form method="post" action="{{ route('user.profile.update') }}" class="mt-6 space-y-6">
         @if(Auth::user()->groupe_id)
             <div>
                 <x-input-label for="groupe_name" :value="__('Your current groupe')" />
                 <x-text-input id="groupe_name" name="groupe_name" type="text" class="mt-1 block w-full" :value="old('name', $user->groupe->name)" required autofocus autocomplete="groupe_name" />
             </div>
-            <form method="POST" action="{{ route('groupe-secession') }}">
+            <form method="POST" action="{{ route('user.groupe-secession') }}">
                 @csrf
                 <button type="submit" class="px-4 py-2 bg-red-500 text-white rounded-md flex flex-col sm:justify-center">{{ __('Quit this groupe') }}</button>
             </form>

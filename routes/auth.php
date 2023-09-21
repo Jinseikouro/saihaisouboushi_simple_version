@@ -14,7 +14,7 @@ use App\Http\Controllers\User\Auth\
     VerifyEmailController
 };
 use App\Http\Controllers\User\ToggleAbsenceController;
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\User\ProfileController;
 use App\Http\Controllers\Groupe\
 {
     GroupeMemberController,
