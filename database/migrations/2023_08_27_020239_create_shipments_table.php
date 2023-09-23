@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('groupe_id')->references('id')->on('groupes')->onDelete('cascade');
             $table->dateTime('delivery_start_time');
             $table->dateTime('delivery_end_time');
+            $table->boolean('delivery_status');
             $table->timestamps();
         });
     }

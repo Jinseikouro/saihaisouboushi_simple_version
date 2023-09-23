@@ -20,4 +20,9 @@ class Shipment extends Model
     {
         return $this->belongsTo(Driver::class,'driver_id');
     }
+
+    protected $fillable =
+    [
+        'delivery_status'
+    ];
 }

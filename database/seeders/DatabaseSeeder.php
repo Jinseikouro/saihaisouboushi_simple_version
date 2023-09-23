@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $numberOfRoop = 5;
+        $numberOfRoop = 20;
         $i=0;
         while($i<$numberOfRoop){
             $groupe = Groupe::factory()->create();
@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
             $numberOfUsers = fake()->NumberBetween(1,5);
             User::factory($numberOfUsers)->create(['groupe_id' => $groupe->id]);
 
-            
+
             $driver = Driver::factory()->create();
             $numberOfShipments = fake()->NumberBetween(1,3);
             Shipment::factory($numberOfShipments)->create([
@@ -42,7 +42,7 @@ class DatabaseSeeder extends Seeder
             $i++;
         }
 
-            
+
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',

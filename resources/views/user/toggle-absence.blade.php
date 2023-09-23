@@ -6,7 +6,7 @@
     </x-slot>
 
     <div class="flex items-center justify-center mt-4">
-        <form method="POST" action="{{ route('toggle-absence') }}">
+        <form method="POST" action="{{ route('user.toggle-absence') }}">
             @csrf
             <input type="hidden" name="user_id" value="{{ $user->id }}">
 
