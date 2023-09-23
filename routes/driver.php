@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Driver\DriverProfileController;
+use App\Http\Controllers\Driver\ProfileController;
+use App\Http\Controllers\Driver\ShipmentsConfirmation\UserStatusConfirmController;
 use App\Http\Controllers\Driver\Auth\
 {
     AuthenticatedSessionController,
@@ -15,11 +16,13 @@ use App\Http\Controllers\Driver\Auth\
 
 };
 
-Route::get('dashboard', function () {
+Route::get('dashboard', function ()
+{
     return view('driver.dashboard');
 })->middleware(['auth:drivers', 'verified'])->name('dashboard');
 
-Route::middleware('guest')->group(function () {
+Route::middleware('guest')->group(function ()
+{
     Route::get('register', [RegisteredDriverController::class, 'create'])
                 ->name('register');
 
@@ -42,7 +45,8 @@ Route::middleware('guest')->group(function () {
                 ->name('password.store');
 });
 
-Route::middleware('auth:drivers')->group(function () {
+Route::middleware('auth:drivers')->group(function ()
+{
     Route::get('verify-email', EmailVerificationPromptController::class)
                 ->name('verification.notice');
 
@@ -64,7 +68,10 @@ Route::middleware('auth:drivers')->group(function () {
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');
 
-    Route::get('/profile', [DriverProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [DriverProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [DriverProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('customer-status',[UserStatusConfirmController::class, 'showlist'])->name('customer.status');
+    Route::post('customer-status', [UserStatusConfirmController::class, 'toggleShipmentStatus']);
 });

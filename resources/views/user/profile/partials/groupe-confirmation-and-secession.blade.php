@@ -13,7 +13,7 @@
         @if(Auth::user()->groupe_id)
             <div>
                 <x-input-label for="groupe_name" :value="__('Your current groupe')" />
-                <x-text-input id="groupe_name" name="groupe_name" type="text" class="mt-1 block w-full" :value="old('name', $user->groupe->name)" required autofocus autocomplete="groupe_name" />
+                <x-text-input id="groupe_name" name="groupe_name" type="text" class="mt-1 block w-full" :value="old('name', $user->groupe->name)" disabled />
             </div>
             <form method="POST" action="{{ route('user.groupe-secession') }}">
                 @csrf

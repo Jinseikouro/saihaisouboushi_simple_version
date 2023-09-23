@@ -157,5 +157,32 @@
     "Confirm your groupe, and click 'Quit this groupe' bottun where you need.":"所属グループを確認し、やめる場合は「グループを脱退する」をクリックしてください",
     "Your current groupe":"現在の所属グループ:",
     "You are not part of any groupe.":"現在グループには所属していません",
-    "Quit this groupe":"グループを脱退する"
+    "Quit this groupe":"グループを脱退する",
+    "User status confirmation":"商品とお客様の在宅状況確認画面",
+    "Shipment ID":"商品ID",
+    "Customer post code":"お客様郵便番号",
+    "Customer address":"お客様住所",
+    "Deliverable or not":"在宅状況",
+    "User profile form":"ユーザー用プロファイル画面",
+    "Driver profile form":"ドライバー用プロファイル画面",
+    "Link list for user":"ユーザー用ページ一覧画面",
+    "Link list for driver":"ドライバー用ページ一覧画面",
+    "Groupe register form":"グループ登録フォーム",
+    "Groupe show list":"グループ一覧画面",
+    "Change user absence status":"ユーザー在宅状況変更画面",
+    "Customers and shipments status confirmation form":"商品とお客様の在宅状況確認画面",
+    "delivery start time":"配送開始時刻",
+    "delivery end time":"配送終了時刻",
+    "available":"可能",
+    "unavailable":"不可",
+    "Delivery status":"配送状況",
+    "End delivery confirmation form":"配送ステータス変更確認画面",
+    "End delivery":"配送状況を変更する",
+    "Alter status":"変更",
+    "You can deliver.":"配送可能",
+    "You cannot deliver.":"配送不可",
+    "Delivery on the way":"配送中",
+    "Delivery completed":"配送済み"
+
+
 }

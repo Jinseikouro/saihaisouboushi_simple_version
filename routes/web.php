@@ -2,6 +2,7 @@
 
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\User\FrontPages\HelpPrivacyController;
 
 
 
@@ -16,10 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('user.welcome');
-});
+Route::get('/',function () {return view('user.front-pages.landing');})->name('welcome');
 
+Route::get('help',function () {return view('user.front-pages.help');})->name('help-page');
+Route::get('privacy',function () {return view('user.front-pages.privacy');})->name('privacy-page');
 //Route::get('/dashboard', function () {
 //    return view('dashboard');
 //})->middleware(['auth', 'verified'])->name('dashboard');
@@ -30,4 +31,3 @@ Route::get('/', function () {
 
 
 require __DIR__.'/auth.php';
-//require __DIR__.'/driver.php';

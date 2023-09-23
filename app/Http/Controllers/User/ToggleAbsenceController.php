@@ -40,9 +40,12 @@ class ToggleAbsenceController extends Controller
 
         if ($groupe !== null)// Groupe レコードが見つかった場合のみ処理を行う
         {
-            if ($absenceInGroup) {
+            if ($absenceInGroup)
+            {
                 $groupe->update(['absence' => 1]);
-            } else {
+            }
+            else
+            {
                 $groupe->update(['absence' => 0]);
             }
         }

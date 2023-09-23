@@ -15,7 +15,7 @@ use App\Http\Controllers\User\Auth\
 };
 use App\Http\Controllers\User\ToggleAbsenceController;
 use App\Http\Controllers\User\ProfileController;
-use App\Http\Controllers\Groupe\
+use App\Http\Controllers\User\Groupe\
 {
     GroupeMemberController,
     GroupeRegisterController,
@@ -23,7 +23,7 @@ use App\Http\Controllers\Groupe\
 };
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('user.dashboard');
 })->middleware(['auth:users', 'verified'])->name('dashboard');
 
 
@@ -49,6 +49,8 @@ Route::middleware('guest')->group(function () {
 
     Route::post('reset-password', [NewPasswordController::class, 'store'])
                 ->name('password.store');
+
+
 });
 
 Route::middleware('auth:users')->group(function () {

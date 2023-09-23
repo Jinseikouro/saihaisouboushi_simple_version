@@ -17,7 +17,7 @@ class GroupeFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->company(),
+            'name' => fake()->unique()->company(),
             'post_code' => fake()->postcode(),
             'address' => fake()->address()
         ];
