@@ -136,7 +136,7 @@
               data-ease="easeInOutCubic" data-hide-effect="top(long,false)" data-offset-x="0" data-offset-y="-40"
               data-origin="mc" data-position="center" data-masked="false">
               <div class="text-center">
-                <p style="line-height: 1.5;">より便利な<br> <font color="yellow">宅配システム</font>を提供します。
+                <p style="line-height: 1.5;">ワンストップで解決！<br> <font color="yellow">配送不可を</font>楽々連絡！
                 </p>
               </div>
             </div>
@@ -428,11 +428,16 @@
                         </div>
                       </div>
                       <div class="col-lg-6 mx-auto px-0">
-                        <blockquote class="blockquote text-center mb-0 px-4 py-5 py-lg-7">
+                        <blockquote class="blockquote mb-0 px-4 py-5 py-lg-7">
                           <!-- Text -->
                           <p class="mb-5 fs-4 w-lg-75 mx-auto">
-                            <h3>早稲田文理専門学校</h3>
-                            <br>〒171-0033 <br>東京都豊島区高田2-6-7
+                            <font size="6"  face="ＭＳ Ｐゴシック,ＭＳ ゴシック" color="blue">このアプリケーションのメリット</font>
+                            <ul>
+                              <li>急な用事ができた際に、ドライバーさんに受取不可の通知ができる！</li>
+                              <li>複数のは配送業者に一回で連絡できる！</li>
+                              <li>受取不可連絡はボタン一つで簡単報告</li>
+                              <li>家族や会社など複数人での運用も可能！</li>
+                            </ul>
                           </p>
                         </blockquote>
                       </div>
