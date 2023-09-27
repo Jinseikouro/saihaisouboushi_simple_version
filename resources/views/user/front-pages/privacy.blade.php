@@ -187,6 +187,7 @@
             <div class="row">
                 <div class="col-md-12 col-lg-4 mb-5 h-100 me-auto">
                     <!--Title-->
+                    <h2 class="text-white mb-0 larger-text">No!</h2>
                     <h2 class="display-6 text-white mb-0 position-relative">
                         re:配
                     </h2>

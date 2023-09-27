@@ -332,7 +332,7 @@
                 </div>
                 <!--Content-body-->
                 <div class="card-body pb-5 position-relative">
-                  <h6 class="py-3 mb-0">Project Leader</h6>
+                  <h6 class="py-3 mb-0">Project Engineer</h6>
                   <h5 class="py-3 mb-0">広川 紀子</h5>
                 </div>
 
@@ -357,7 +357,7 @@
                 </div>
                 <!--Content-body-->
                 <div class="card-body pb-5 position-relative">
-                  <h6 class="py-3 mb-0">Project Leader</h6>
+                  <h6 class="py-3 mb-0">Project Engineer</h6>
                   <h5 class="py-3 mb-0">吉岡 瑞規</h5>
                 </div>
 
@@ -461,6 +461,7 @@
             <div class="row">
                 <div class="col-md-12 col-lg-4 mb-5 h-100 me-auto">
                     <!--Title-->
+                    <h2 class="text-white mb-0 larger-text">No!</h2>
                     <h2 class="display-6 text-white mb-0 position-relative">
                         re:配
                     </h2>
