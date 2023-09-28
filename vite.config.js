@@ -6,7 +6,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 const pwaOptions = {
     manifest: {
       name: 'No! re:配',
-      short_name: 'NRH',
+      short_name: 'No! re:配',
       description: '再配送を減らします',
       icons: [
         {
